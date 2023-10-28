@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+$border-color: #d0d0d0;
+$header-color: #333;
+$text-color: #666;
+
+$desktop-width: 40rem;
+
+@mixin breakpoint($break) {
+    @if $break == large {
+        @media (min-width: #{$desktop-width}) { @content; }
+        }
+  }
+
+h1 a, h2 a, h2 {
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    color: $header-color;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50pt;
+    @include breakpoint(large){font-size: 35pt;}
+}
+
+nav{
+    border-top: solid $border-color;
+    border-bottom: solid $border-color;
+    text-align: center;
+    @include breakpoint(large){text-align: right;}
+    ul { 
+        list-style: none;
+        @include breakpoint(large){margin-bottom: 0;}
+        li {
+            margin-bottom: 15px;
+            @include breakpoint(large){display: inline-block;
+                margin-left: 3%;}
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $text-color;
+            }
+            a:hover {
+                color: #00ddff;
+            }
+        }
+    }
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+    color: $header-color;
+}
+
+.post-date {
+    text-transform: uppercase;
+    border-bottom: solid $border-color;
+    text-align: right;
+    margin-top:10%;
+    padding-bottom: 2%;
+    @include breakpoint(large){text-transform: uppercase;
+        border-bottom: none;
+        padding-left: 40%;}
+}
+
+p a {
+    text-decoration: none;
+    color: $text-color ;
+}
+
+main{
+    @include breakpoint(large){margin-top: 2%;}
+}
+
+
+img {
+    width: 100%;
+}
+
+article {
+    border-bottom: solid #d0d0d0;
+    @include breakpoint(large){border-bottom: none;
+        display: grid;
+        grid-template-columns: 1fr 2fr;}
+    section{
+        @include breakpoint(large){border-left: solid #d0d0d0;}
+        h2 a{
+            color: $text-color ;
+        }
+        
+    } 
+    h2, p{
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+
+
+// @media #{$desktop}{
+
+//      nav{
+//         text-align: right;
+//         ul {
+//             margin-bottom: 0;
+//             li{
+//                 display: inline-block;
+//                 margin-left: 3%;
+//              }
+//          }
+//      }
+
+//      .post-date {
+//         text-transform: uppercase;
+//         border-bottom: none;
+//         padding-left: 40%;
+//      }
+
+//      main{
+//         margin-top: 2%;
+//      }
+
+//      article {
+//         border-bottom: none;
+//         display: grid;
+//         grid-template-columns: 1fr 2fr;
+        
+//     }
+
+//     section {
+//         border-left: solid $border-color;
+//     }
+// }

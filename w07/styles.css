@@ -1,0 +1,185 @@
+body{
+    margin: 0;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 1000; 
+}
+
+#header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 80px;
+    margin-bottom: 0;
+    background-color: #f2ebd1;
+}
+
+.cut{
+    margin: 5%;
+    align-items: center;
+}
+
+.cut button{
+    width: 100%;
+    background-color: #f1c34a;
+    border-radius: 5px;
+    padding: 3%;
+}
+
+.header-image img{
+    width: 100%;
+    margin-top: -2%;
+    margin-bottom: 0;
+}
+.mobile {
+    width: 100%;
+    background-color: #f2ebd1;
+    height: 50%;
+    margin-top: -5%;
+}
+
+#join{
+    background-color: white;
+}
+
+.content{
+    margin: 10%;
+    align-items: center;
+    background-color: white;
+}
+
+.join-section {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    background-color: white;
+}
+
+.join-section div{
+    margin-top: -4%;
+}
+
+.green-text{
+    color: #4c884b;
+}
+
+.content .disclaimer{
+    font-size: smaller;
+}
+
+#weekly {
+    background-color: #fff9ea;
+    display: grid;
+}
+
+.div-container{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#productCard1{
+    margin-left: 8%;
+}
+
+.product-card{
+    background-color: white;
+    margin: 1%;
+    padding: 5%;
+    box-shadow: 5px 5px 5px 5px rgba(0.8, 0.8, 0.2, 0.1);
+    border-radius: 8px;
+    text-wrap: wrap;
+}
+
+.product-card img {
+    width: 100%;
+
+}
+
+#cut1 {
+    margin: 10%;
+}
+
+#cut2 {
+    display: none;
+}
+
+#arrow {
+    display: none;
+}
+
+.cut-content {
+    margin: 10%;
+}
+
+.cut-content li{
+    margin-bottom: 5%;
+}
+
+@media only screen and (min-width: 50rem){
+    #header {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 50px;
+    }
+    .cut button{
+        width: 40%;
+    }
+    .line {
+        width: 3px; /* Adjust the width to change the thickness of the line */
+        height: 100px;
+        background-color: #000; 
+        margin: 50%;
+    }
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
+    }
+    #cut1{
+        display: none;
+    }
+    #cut2{
+        display: inline;
+    }
+    #weekly{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #arrow{
+        display: inline;
+    }
+    .cut-content{
+        display: grid;
+        margin-left: 30%;
+    }
+    .div-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        overflow-x: hidden;
+        overflow: visible;
+        margin: 10%;
+        
+    }
+    .product-card {
+        width: 75%;
+        padding: 8%;
+        margin: 5%;
+    }
+    #productCard1{
+        margin-left: 5%;
+    }
+}
